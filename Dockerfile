@@ -4,7 +4,7 @@ WORKDIR /
 
 RUN apt-get update \
     && apt-get upgrade -yq \
-    && apt-get install -yq lcov git-core curl unzip \
+    && apt-get install -yq lcov git-core curl unzip libglu1 \
     && git clone --single-branch -b beta https://github.com/flutter/flutter.git \
     && /flutter/bin/flutter doctor \
     && apt-get remove -y curl unzip \
